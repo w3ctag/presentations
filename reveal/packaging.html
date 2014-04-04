@@ -49,6 +49,20 @@
 						<h2>Problem</h2>
 					</section>
 					<section>
+						<h3>Building WebApps Today</h3>
+						<pre><code>&lt;html&gt;
+  &lt;head&gt;
+  	&lt;script src="/app.js"&gt;&lt;/script&gt;
+  	&lt;link rel="stylesheet" src="/app.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+						<p>+ build steps to concat JS &amp; CSS</p>
+						<p>+ spriting of images referenced in the CSS</p>
+					</section>
+					<section>
 						<h3>Implications of Extensible Web</h3>
 						<ul>
 							<li>web components need lots of different resources</li>
@@ -58,6 +72,25 @@
 							<li class="fragment">HTTP2 will only work for sophisticated servers, in the future</li>
 							<li class="fragment">imagine shipping via GitHub gh-pages or locked-down Apache</li>
 						</ul>
+					</section>
+					<section>
+						<h3>Building WebApps Soon</h3>
+						<pre><code>&lt;html&gt;
+  &lt;head&gt;
+  	&lt;script src="/component1/module1.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component1/module2.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component1/module3.js"&gt;&lt;/script&gt;
+  	&lt;link rel="stylesheet" src="/component1/style.css"&gt;
+  	&lt;script src="/component2/module1.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component2/module2.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component2/module3.js"&gt;&lt;/script&gt;
+  	&lt;link rel="stylesheet" src="/component2/style.css"&gt;
+  	...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 					</section>
 					<section>
 						<h3>Packages are Useful</h3>
@@ -79,6 +112,28 @@
 							<li>method to address resources in a package</li>
 							<li>method to get (point to/download) a package</li>
 						</ol>
+					</section>
+					<section>
+						<h3>Building WebApps Soon</h3>
+						<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    <strong>    &lt;link rel="package" src="component1.pkg" extent="component1/*"&gt;</strong>
+    <strong>    &lt;link rel="package" src="component2.pkg" extent="component2/*"&gt;</strong>
+    
+  	&lt;script src="/component1/module1.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component1/module2.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component1/module3.js"&gt;&lt;/script&gt;
+  	&lt;link rel="stylesheet" src="/component1/style.css"&gt;
+  	&lt;script src="/component2/module1.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component2/module2.js"&gt;&lt;/script&gt;
+  	&lt;script src="/component2/module3.js"&gt;&lt;/script&gt;
+  	&lt;link rel="stylesheet" src="/component2/style.css"&gt;
+  	...
+  &lt;/head&gt;
+  &lt;body&gt;
+    ...
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 					</section>
 
 					<section>
